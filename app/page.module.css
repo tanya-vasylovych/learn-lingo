@@ -1,17 +1,23 @@
 .container {
   margin: 0 auto;
   width: 100%;
-  background: #fff;
+  background: #f8f8f8;
   display: flex;
+  gap: 24px;
 }
-
-.text {
+.box {
   border-radius: 30px;
   width: 720px;
   height: 530px;
   background: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-left: 64px;
 }
+
 .title {
+  margin-top: 98px;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 48px;
@@ -34,4 +40,11 @@
   width: 267px;
   height: 60px;
   background: #9fb7ce;
+  border-color: transparent;
+}
+.img {
+  border-radius: 30px;
+  width: 568px;
+  height: 530px;
+  background: #bfd6ea;
 }
