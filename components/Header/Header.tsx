@@ -19,10 +19,14 @@ const Header = () => {
       </nav>
       <ul className={css.buttons}>
         <li>
-          <button className={css.login}>Log in</button>
+          <Link href="/auth/login" className={css.login}>
+            Log in
+          </Link>
         </li>
         <li>
-          <button className={css.registration}>Registration</button>
+          <Link href="/auth/register" className={css.registration}>
+            Registration
+          </Link>
         </li>
       </ul>
     </header>

@@ -8,11 +8,6 @@
   margin-bottom: 4px;
 }
 
-.header a {
-  text-decoration: none;
-  color: #101828;
-}
-
 .logo {
   font-family: var(--font-family);
   font-weight: 500;
@@ -37,10 +32,6 @@
   height: 20px;
 }
 
-.navigation li a {
-  text-decoration: none;
-  color: #101828;
-}
 .buttons {
   display: flex;
   gap: 16px;
@@ -56,6 +47,7 @@
   color: #121417;
   border: none;
 }
+
 .registration {
   border-radius: 12px;
   width: 166px;
