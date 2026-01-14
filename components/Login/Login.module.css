@@ -1,10 +1,10 @@
 .container {
   border-radius: 30px;
-  width: 565px;
-  height: 599px;
   background: #f8f8f8;
   margin: 0 auto;
   padding: 64px;
+  width: 565px;
+  height: 505px;
 }
 
 .title {
