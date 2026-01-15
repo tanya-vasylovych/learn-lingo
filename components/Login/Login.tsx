@@ -1,6 +1,8 @@
 "use client";
 import css from "./Login.module.css";
 import { useState, FormEvent, ChangeEvent } from "react";
+import { IoClose } from "react-icons/io5";
+import { LuEyeOff } from "react-icons/lu";
 
 interface FormData {
   email: string;
@@ -27,6 +29,7 @@ const Login = () => {
   };
   return (
     <div className={css.container}>
+      <IoClose className={css.close} />
       <div>
         {" "}
         <h2 className={css.title}>Log In</h2>
@@ -50,18 +53,20 @@ const Login = () => {
         </div>
 
         <div className={css.field}>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-            className={css.input}
-            placeholder="Password"
-          />
+          <div className={css.passwordContainer}>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              required
+              className={`${css.input} ${css.inputWithIcon}`}
+              placeholder="Password"
+            />
+            <LuEyeOff className={css.passwordIcon} />
+          </div>
         </div>
-
         <button type="submit" className={css.button}>
           Log In
         </button>
