@@ -1,5 +1,6 @@
 import Link from "next/link";
 import css from "./Header.module.css";
+import { FiLogIn } from "react-icons/fi";
 
 const Header = () => {
   return (
@@ -18,7 +19,8 @@ const Header = () => {
         </ul>
       </nav>
       <ul className={css.buttons}>
-        <li>
+        <li className={css.loginItem}>
+          <FiLogIn className={css.loginIcon} />
           <Link href="/auth/login" className={css.login}>
             Log in
           </Link>

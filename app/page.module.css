@@ -41,6 +41,7 @@
   height: 60px;
   background: #9fb7ce;
   border-color: transparent;
+  cursor: pointer;
 }
 .img {
   border-radius: 30px;

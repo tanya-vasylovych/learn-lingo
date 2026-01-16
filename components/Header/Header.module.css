@@ -39,6 +39,10 @@
   height: 48px;
   align-items: center;
 }
+.loginItem {
+  display: flex;
+  gap: 8px;
+}
 .login {
   font-family: var(--font-family);
   font-weight: 700;
@@ -47,7 +51,12 @@
   color: #121417;
   border: none;
 }
-
+.loginIcon {
+  width: 20px;
+  height: 20px;
+  color: #9fb7ce;
+  cursor: pointer;
+}
 .registration {
   border-radius: 12px;
   width: 166px;
@@ -58,4 +67,5 @@
   font-size: 16px;
   line-height: 125%;
   color: #fff;
+  padding: 14px 29px;
 }
