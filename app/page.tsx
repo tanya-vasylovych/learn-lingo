@@ -9,7 +9,8 @@ export default function Home() {
         {" "}
         <div className={css.box}>
           <h1 className={css.title}>
-            Unlock your potential with the best language tutors
+            Unlock your potential with the best{" "}
+            <span className={css.language}>language</span> tutors
           </h1>
           <p className={css.description}>
             Embark on an Exciting Language Journey with Expert Language Tutors:

@@ -25,7 +25,18 @@
   letter-spacing: -0.02em;
   color: #121417;
 }
-
+.language {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-style: italic;
+  font-weight: 400;
+  border-radius: 8px;
+  width: 195px;
+  height: 40px;
+  background: #bfd6ea;
+}
 .description {
   font-family: var(--font-family);
   font-weight: 400;
