@@ -1,7 +1,6 @@
 "use client";
 import css from "./Registration.module.css";
 import { useState, FormEvent, ChangeEvent } from "react";
-import { IoClose } from "react-icons/io5";
 import { LuEyeOff } from "react-icons/lu";
 
 interface FormData {
@@ -31,7 +30,6 @@ const Registration = () => {
   };
   return (
     <div className={css.container}>
-      <IoClose className={css.close} />
       <div>
         {" "}
         <h2 className={css.title}>Registration</h2>

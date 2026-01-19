@@ -69,3 +69,70 @@
   color: #fff;
   padding: 14px 29px;
 }
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modalContent {
+  background: #f8f8f8;
+  border-radius: 30px;
+  padding: 64px;
+  width: 565px;
+  height: 599px;
+
+  overflow: hidden;
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+.closeModal {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #121417;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.login:hover {
+  background: rgba(159, 183, 206, 0.1);
+}
+
+.loginItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

@@ -1,10 +1,7 @@
 .container {
   border-radius: 30px;
-  width: 565px;
-  height: 599px;
   background: #f8f8f8;
   margin: 0 auto;
-  padding: 64px;
 }
 .passwordContainer {
   position: relative;
@@ -40,6 +37,7 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #121417;
+  margin-top: 12px;
 }
 
 .text {

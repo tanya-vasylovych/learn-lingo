@@ -1,7 +1,6 @@
 "use client";
 import css from "./Login.module.css";
 import { useState, FormEvent, ChangeEvent } from "react";
-import { IoClose } from "react-icons/io5";
 import { LuEyeOff } from "react-icons/lu";
 
 interface FormData {
@@ -29,7 +28,6 @@ const Login = () => {
   };
   return (
     <div className={css.container}>
-      <IoClose className={css.close} />
       <div>
         {" "}
         <h2 className={css.title}>Log In</h2>
