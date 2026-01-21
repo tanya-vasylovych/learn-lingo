@@ -50,6 +50,7 @@
   line-height: 125%;
   color: #121417;
   border: none;
+  cursor: pointer;
 }
 .loginIcon {
   width: 20px;
@@ -68,6 +69,7 @@
   line-height: 125%;
   color: #fff;
   padding: 14px 29px;
+  cursor: pointer;
 }
 
 .modalOverlay {
@@ -135,4 +137,14 @@
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.loginModal {
+  width: 565px;
+  height: 505px;
+}
+
+.registrationModal {
+  width: 565px;
+  height: 599px;
 }

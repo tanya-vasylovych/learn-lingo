@@ -45,7 +45,7 @@ const Header = () => {
       {isLoginOpen && (
         <div className={css.modalOverlay} onClick={() => setIsLoginOpen(false)}>
           <div
-            className={css.modalContent}
+            className={`${css.modalContent} ${css.loginModal}`}
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -65,7 +65,7 @@ const Header = () => {
           onClick={() => setIsRegistrationOpen(false)}
         >
           <div
-            className={css.modalContent}
+            className={`${css.modalContent} ${css.registrationModal}`}
             onClick={(e) => e.stopPropagation()}
           >
             <button
