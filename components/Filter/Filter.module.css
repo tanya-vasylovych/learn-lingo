@@ -1,0 +1,89 @@
+.container {
+  width: 583px;
+  height: 74px;
+  margin-top: 96px;
+  margin-left: 128px;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.selectWrapper {
+  position: relative;
+  width: 204px;
+}
+.label {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+  color: #8a8a89;
+  margin-bottom: 8px;
+  display: block;
+}
+.selectIcon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 12px;
+  top: 65%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #121417;
+  transition: color 0.2s ease;
+}
+.select {
+  border-radius: 14px;
+  padding: 16px 148px 16px 18px;
+  width: 221px;
+  height: 48px;
+  border: none;
+  background-color: #fff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 111%;
+  color: #121417;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: border 0.2s ease;
+}
+.level {
+  border-radius: 14px;
+  padding: 14px 81px 14px 18px;
+  width: 198px;
+  height: 48px;
+  border: none;
+  background-color: #fff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 111%;
+  color: #121417;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: border 0.2s ease;
+}
+.price {
+  border-radius: 14px;
+  padding: 14px 18px;
+  width: 124px;
+  height: 48px;
+  border: none;
+  background-color: #fff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 111%;
+  color: #121417;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: border 0.2s ease;
+}
