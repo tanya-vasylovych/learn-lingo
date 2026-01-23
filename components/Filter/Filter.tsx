@@ -9,7 +9,6 @@ const Filter = () => {
         <div className={css.customSelect}>
           <select className={css.select}>
             <option value="">French</option>
-            {/* інші опції */}
           </select>
           <FaChevronDown className={css.selectIcon} />
         </div>

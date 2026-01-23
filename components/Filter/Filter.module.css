@@ -8,10 +8,8 @@
   flex-direction: row;
   gap: 20px;
 }
-
 .selectWrapper {
   position: relative;
-  width: 204px;
 }
 .label {
   font-family: var(--font-family);
@@ -21,60 +19,24 @@
   color: #8a8a89;
   margin-bottom: 8px;
   display: block;
+  position: relative;
 }
 .selectIcon {
   width: 20px;
   height: 20px;
   position: absolute;
   right: 12px;
-  top: 65%;
+  top: 70%;
   transform: translateY(-50%);
   pointer-events: none;
   color: #121417;
   transition: color 0.2s ease;
 }
-.select {
-  border-radius: 14px;
-  padding: 16px 148px 16px 18px;
-  width: 221px;
-  height: 48px;
-  border: none;
-  background-color: #fff;
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 111%;
-  color: #121417;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  transition: border 0.2s ease;
-}
-.level {
-  border-radius: 14px;
-  padding: 14px 81px 14px 18px;
-  width: 198px;
-  height: 48px;
-  border: none;
-  background-color: #fff;
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 111%;
-  color: #121417;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  transition: border 0.2s ease;
-}
+.select,
+.level,
 .price {
   border-radius: 14px;
-  padding: 14px 18px;
-  width: 124px;
-  height: 48px;
-  border: none;
+  border: 2px solid transparent;
   background-color: #fff;
   font-family: var(--font-family);
   font-weight: 500;
@@ -85,5 +47,21 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  transition: border 0.2s ease;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.select {
+  padding: 16px 48px 16px 18px;
+  width: 221px;
+}
+
+.level {
+  padding: 14px 48px 14px 18px;
+  width: 198px;
+}
+
+.price {
+  padding: 14px 48px 14px 18px;
+  width: 124px;
 }

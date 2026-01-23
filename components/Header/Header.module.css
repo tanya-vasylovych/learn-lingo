@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 120px;
-  background-color: #f2f4f7;
+  padding: 20px 128px;
+
   color: #101828;
   margin-bottom: 4px;
 }
@@ -51,6 +51,7 @@
   color: #121417;
   border: none;
   cursor: pointer;
+  background: none;
 }
 .loginIcon {
   width: 20px;
@@ -59,6 +60,7 @@
   cursor: pointer;
 }
 .registration {
+  border: transparent;
   border-radius: 12px;
   width: 166px;
   height: 48px;
