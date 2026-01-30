@@ -5,6 +5,7 @@ import css from "./Header.module.css";
 import { FiLogIn, FiX } from "react-icons/fi";
 import Registration from "@/components/Registration/Registration";
 import Login from "@/components/Login/Login";
+import Logo from "../Logo/Logo";
 
 const Header = () => {
   const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
@@ -12,9 +13,14 @@ const Header = () => {
   return (
     <>
       <header className={css.header}>
-        <Link href="/" aria-label="Home" className={css.logo}>
-          LearnLingo
-        </Link>
+        <div className={css.buttons}>
+          {" "}
+          <Logo />
+          <Link href="/" aria-label="Home" className={css.logo}>
+            LearnLingo
+          </Link>
+        </div>
+
         <nav aria-label="Main Navigation">
           <ul className={css.navigation}>
             <li>

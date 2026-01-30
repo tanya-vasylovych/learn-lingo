@@ -1,7 +1,12 @@
+"use client";
 import Benefit from "@/components/Benefit/Benefit";
 import css from "./page.module.css";
 
 export default function Home() {
+  const handleClick = () => {
+    window.location.href = "/filter/";
+  };
+
   return (
     <div>
       {" "}
@@ -17,7 +22,9 @@ export default function Home() {
             Elevate your language proficiency to new heights by connecting with
             highly qualified and experienced tutors.
           </p>
-          <button className={css.bttn}>Get started</button>
+          <button className={css.bttn} onClick={handleClick}>
+            Get started
+          </button>
         </div>
         <div className={css.img}></div>
       </div>
