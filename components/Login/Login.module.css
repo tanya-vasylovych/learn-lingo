@@ -30,6 +30,9 @@
   cursor: pointer;
   color: #121417;
   pointer-events: auto;
+  background: none;
+  border: none;
+  padding: 4px;
 }
 
 .title {

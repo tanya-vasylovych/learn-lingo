@@ -1,7 +1,7 @@
 "use client";
 import css from "./Login.module.css";
 import { useState, FormEvent, ChangeEvent } from "react";
-import { LuEyeOff } from "react-icons/lu";
+import { LuEyeOff, LuEye } from "react-icons/lu";
 
 interface FormData {
   email: string;
@@ -13,6 +13,7 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const [showPassword, setShowPassword] = useState(false);
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -20,6 +21,9 @@ const Login = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -53,7 +57,7 @@ const Login = () => {
         <div className={css.field}>
           <div className={css.passwordContainer}>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               id="password"
               name="password"
               value={formData.password}
@@ -62,7 +66,14 @@ const Login = () => {
               className={`${css.input} ${css.inputWithIcon}`}
               placeholder="Password"
             />
-            <LuEyeOff className={css.passwordIcon} />
+            <button
+              type="button"
+              className={css.passwordIcon}
+              onClick={togglePasswordVisibility}
+              aria-label={showPassword ? "Hide password" : "Show password"}
+            >
+              {showPassword ? <LuEyeOff /> : <LuEye />}
+            </button>
           </div>
         </div>
         <button type="submit" className={css.button}>

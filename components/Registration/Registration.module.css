@@ -29,6 +29,9 @@
   cursor: pointer;
   color: #121417;
   pointer-events: auto;
+  background: none;
+  border: none;
+  padding: 4px;
 }
 .title {
   font-family: var(--font-family);
@@ -64,11 +67,12 @@
   padding: 16px 18px;
   width: 438px;
   height: 54px;
+  box-sizing: border-box;
 }
 
 .button {
   border-radius: 12px;
-  border-color: transparent;
+  border: transparent;
   padding: 16px 210px;
   width: 438px;
   height: 60px;
@@ -80,4 +84,5 @@
   line-height: 156%;
   color: #121417;
   padding: 16px;
+  box-sizing: border-box;
 }
