@@ -53,6 +53,10 @@
   border-color: transparent;
   cursor: pointer;
 }
+.bttn:hover,
+.bttn:focus {
+  background: #bfd6ea;
+}
 .img {
   border-radius: 30px;
   width: 568px;

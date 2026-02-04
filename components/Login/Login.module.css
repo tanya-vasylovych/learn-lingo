@@ -85,3 +85,7 @@
   color: #121417;
   padding: 16px;
 }
+.button:hover,
+.button:focus {
+  background: #ffdc86;
+}

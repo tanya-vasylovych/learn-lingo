@@ -86,3 +86,7 @@
   padding: 16px;
   box-sizing: border-box;
 }
+.button:hover,
+.button:focus {
+  background: #ffdc86;
+}

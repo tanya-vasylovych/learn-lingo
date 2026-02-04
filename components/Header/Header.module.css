@@ -59,6 +59,10 @@
   color: #9fb7ce;
   cursor: pointer;
 }
+.loginIcon:hover,
+.loginIcon:focus {
+  color: #bfd6ea;
+}
 .registration {
   border: transparent;
   border-radius: 12px;
