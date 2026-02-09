@@ -33,7 +33,18 @@ const Header = () => {
         </nav>
         <ul className={css.buttons}>
           <li className={css.loginItem}>
-            <FiLogIn className={css.loginIcon} />
+            <FiLogIn
+              className={css.loginIcon}
+              onClick={() => setIsRegistrationOpen(true)}
+              style={{ cursor: "pointer" }}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  setIsRegistrationOpen(true);
+                }
+              }}
+            />
             <button onClick={() => setIsLoginOpen(true)} className={css.login}>
               Log in
             </button>
