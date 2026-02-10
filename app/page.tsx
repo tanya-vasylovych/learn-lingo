@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Benefit from "@/components/Benefit/Benefit";
 import css from "./page.module.css";
 
@@ -26,7 +27,16 @@ export default function Home() {
             Get started
           </button>
         </div>
-        <div className={css.img}></div>
+        <div className={css.img}>
+          <Image
+            src="/image/block.webp"
+            alt="Language tutors illustration"
+            width={568}
+            height={530}
+            priority={true}
+            quality={85}
+          />
+        </div>
       </div>
       <div>
         <Benefit />
