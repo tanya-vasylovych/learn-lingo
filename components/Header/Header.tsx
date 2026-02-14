@@ -91,7 +91,25 @@ const Header = () => {
             >
               <FiX />
             </button>
-            <Registration />
+            {isRegistrationOpen && (
+              <div
+                className={css.modalOverlay}
+                onClick={() => setIsRegistrationOpen(false)}
+              >
+                <div
+                  className={`${css.modalContent} ${css.registrationModal}`}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <button
+                    className={css.closeModal}
+                    onClick={() => setIsRegistrationOpen(false)}
+                  >
+                    <FiX />
+                  </button>
+                  <Registration onClose={() => setIsRegistrationOpen(false)} />
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}
