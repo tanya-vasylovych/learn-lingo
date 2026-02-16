@@ -1,82 +1,106 @@
 "use client";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { useEffect, useState } from "react";
 import css from "./Login.module.css";
-import { useState, FormEvent, ChangeEvent } from "react";
 import { LuEyeOff, LuEye } from "react-icons/lu";
 
-interface FormData {
-  email: string;
-  password: string;
+const schema = yup.object({
+  email: yup
+    .string()
+    .email("Невірний формат email")
+    .required("Email обов'язковий"),
+  password: yup
+    .string()
+    .min(6, "Пароль має бути не менше 6 символів")
+    .required("Пароль обов'язковий"),
+});
+
+type FormData = yup.InferType<typeof schema>;
+
+interface LoginProps {
+  onClose: () => void;
 }
 
-const Login = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+const Login = ({ onClose }: LoginProps) => {
   const [showPassword, setShowPassword] = useState(false);
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+    reset,
+  } = useForm<FormData>({
+    resolver: yupResolver(schema),
+    mode: "onChange",
+  });
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [onClose]);
+
+  const onSubmit = (data: FormData) => {
+    console.log("Login data:", data);
+    reset();
+    onClose();
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Data:", formData);
-  };
+  const togglePassword = () => setShowPassword(!showPassword);
   return (
     <div className={css.container}>
       <div>
-        {" "}
         <h2 className={css.title}>Log In</h2>
         <p className={css.text}>
           Welcome back! Please enter your credentials to access your account and
           continue your search for an teacher.
         </p>
       </div>
-      <form onSubmit={handleSubmit} className={css.form}>
+
+      <form onSubmit={handleSubmit(onSubmit)} className={css.form}>
         <div className={css.field}>
           <input
+            {...register("email")}
             type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className={css.input}
+            className={`${css.input} ${errors.email ? css.inputError : ""}`}
             placeholder="Email"
           />
+          {errors.email && <p className={css.error}>{errors.email.message}</p>}
         </div>
 
         <div className={css.field}>
           <div className={css.passwordContainer}>
             <input
               type={showPassword ? "text" : "password"}
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-              className={`${css.input} ${css.inputWithIcon}`}
+              {...register("password")}
+              className={`${css.input} ${css.inputWithIcon} ${
+                errors.password ? css.inputError : ""
+              }`}
               placeholder="Password"
             />
             <button
               type="button"
               className={css.passwordIcon}
-              onClick={togglePasswordVisibility}
+              onClick={togglePassword}
               aria-label={showPassword ? "Hide password" : "Show password"}
             >
               {showPassword ? <LuEyeOff /> : <LuEye />}
             </button>
           </div>
+          {errors.password && (
+            <p className={css.error}>{errors.password.message}</p>
+          )}
         </div>
-        <button type="submit" className={css.button}>
+
+        <button
+          type="submit"
+          disabled={!isValid}
+          className={`${css.button} ${!isValid ? css.buttonDisabled : ""}`}
+        >
           Log In
         </button>
       </form>

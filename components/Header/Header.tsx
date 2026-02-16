@@ -35,13 +35,13 @@ const Header = () => {
           <li className={css.loginItem}>
             <FiLogIn
               className={css.loginIcon}
-              onClick={() => setIsRegistrationOpen(true)}
+              onClick={() => setIsLoginOpen(true)}
               style={{ cursor: "pointer" }}
               role="button"
               tabIndex={0}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
-                  setIsRegistrationOpen(true);
+                  setIsLoginOpen(true);
                 }
               }}
             />
@@ -71,7 +71,7 @@ const Header = () => {
             >
               <FiX />
             </button>
-            <Login />
+            <Login onClose={() => setIsLoginOpen(false)} />
           </div>
         </div>
       )}
