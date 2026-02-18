@@ -1,0 +1,17 @@
+.card {
+  border-radius: 24px;
+  padding: 24px;
+  width: 1184px;
+  height: 328px;
+  background: #fff;
+  margin-top: 32px;
+  margin-left: 128px;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+}
+.text {
+}
+.name {
+}
