@@ -11,7 +11,39 @@
   flex-direction: row;
   gap: 48px;
 }
+.detailBlock {
+  width: 968px;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.details {
+  width: 607px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+.detail {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #121417;
+}
 .text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #8a8a89;
 }
 .name {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  color: #121417;
+  margin-top: 8px;
 }

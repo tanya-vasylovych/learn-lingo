@@ -1,5 +1,8 @@
 import Image from "next/image";
 import css from "./Cards.module.css";
+import { LuBookOpen } from "react-icons/lu";
+import { GoStarFill } from "react-icons/go";
+import { CiHeart } from "react-icons/ci";
 
 const Cards = () => {
   return (
@@ -14,8 +17,26 @@ const Cards = () => {
             priority={true}
             quality={85}
           />
-          <div className={css.text}>
-            <p className={css.name}>Jane Smith</p>
+          <div className={css.detailBlock}>
+            <div>
+              <p className={css.text}>Languages</p>
+              <p className={css.name}>Jane Smith</p>
+            </div>
+            <div>
+              <ul className={css.details}>
+                <li className={css.detail}>
+                  <LuBookOpen />
+                  Lessons online
+                </li>
+                <li className={css.detail}>Lessons done: 1098</li>
+                <li className={css.detail}>
+                  <GoStarFill />
+                  Rating: 4.8
+                </li>
+                <li className={css.detail}>Price / 1 hour: 30$</li>
+                <CiHeart />
+              </ul>
+            </div>
           </div>
         </li>
       </ul>
