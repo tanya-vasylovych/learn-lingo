@@ -36,7 +36,6 @@ const Header = () => {
             <FiLogIn
               className={css.loginIcon}
               onClick={() => setIsLoginOpen(true)}
-              style={{ cursor: "pointer" }}
               role="button"
               tabIndex={0}
               onKeyDown={(e) => {

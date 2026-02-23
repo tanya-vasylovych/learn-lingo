@@ -25,16 +25,20 @@ const Cards = () => {
             <div>
               <ul className={css.details}>
                 <li className={css.detail}>
-                  <LuBookOpen />
+                  <LuBookOpen className={css.icon} />
                   Lessons online
                 </li>
                 <li className={css.detail}>Lessons done: 1098</li>
                 <li className={css.detail}>
-                  <GoStarFill />
+                  <GoStarFill className={css.iconStar} />
                   Rating: 4.8
                 </li>
-                <li className={css.detail}>Price / 1 hour: 30$</li>
-                <CiHeart />
+                <li className={css.detail}>
+                  Price / 1 hour: <span className={css.price}>30$</span>
+                </li>
+                <li className={css.detail}>
+                  <CiHeart className={css.iconHeart} />
+                </li>
               </ul>
             </div>
           </div>
