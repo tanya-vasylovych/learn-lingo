@@ -17,8 +17,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  gap: 16px;
+  align-items: flex-start;
 }
 .details {
   width: 607px;
@@ -81,4 +80,30 @@
   fill: #f4c550;
   stroke-width: 1px;
   stroke: #f4c550;
+}
+.spanWord {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #8a8a89;
+  padding-right: 4px;
+}
+.info {
+  width: 808px;
+  height: 88px;
+  margin-top: 32px;
+}
+.infoItem {
+  margin-bottom: 8px;
+}
+.read {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #121417;
+  margin-top: 16px;
 }
