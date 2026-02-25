@@ -61,11 +61,19 @@ const Cards = () => {
                   <p className={css.detail}>
                     <span className={css.spanWord}>Conditions:</span>
                     Welcomes both adult learners and teenagers (13 years and
-                    above).Provides personalized study plans
+                    above).Provides personalized study plans.
                   </p>
                 </li>
               </ul>
               <p className={css.read}>Read more</p>
+            </div>
+            <div>
+              <ul className={css.level}>
+                <li className={css.levelItem}>#A1 Beginner</li>
+                <li className={css.levelItem}>#A2 Elementary</li>
+                <li className={css.levelItem}>#B1 Intermediate</li>
+                <li className={css.levelItem}>#B2 Upper-Intermediate</li>
+              </ul>
             </div>
           </div>
         </li>

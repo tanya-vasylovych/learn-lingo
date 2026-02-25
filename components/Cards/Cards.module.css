@@ -91,7 +91,6 @@
 }
 .info {
   width: 808px;
-  height: 88px;
   margin-top: 32px;
 }
 .infoItem {
@@ -106,4 +105,27 @@
   text-decoration-skip-ink: none;
   color: #121417;
   margin-top: 16px;
+  cursor: pointer;
+}
+.level {
+  width: 566px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 32px;
+}
+.levelItem {
+  border-radius: 35px;
+  padding: 8px 12px;
+  height: 32px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114%;
+  color: #121417;
+}
+.levelItem:hover,
+.levelItem:active {
+  background: #f4c550;
 }
