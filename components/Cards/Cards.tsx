@@ -148,7 +148,7 @@ const Cards = () => {
         </li>
         <li className={css.card}>
           <Image
-            src="/image/sarah.jpg"
+            src="/image/sarah.png"
             alt="girl"
             width={96}
             height={96}
@@ -159,7 +159,7 @@ const Cards = () => {
             <div className={css.detailBlock}>
               <div>
                 <p className={css.text}>Languages</p>
-                <p className={css.name}>Jane Smith</p>
+                <p className={css.name}>Sarah Johnson</p>
               </div>
               <div>
                 <ul className={css.details}>
@@ -167,13 +167,13 @@ const Cards = () => {
                     <LuBookOpen className={css.icon} />
                     Lessons online
                   </li>
-                  <li className={css.detail}>Lessons done: 1098</li>
+                  <li className={css.detail}>Lessons done: 1120</li>
                   <li className={css.detail}>
                     <GoStarFill className={css.iconStar} />
-                    Rating: 4.8
+                    Rating: 4.6
                   </li>
                   <li className={css.detail}>
-                    Price / 1 hour: <span className={css.price}>30$</span>
+                    Price / 1 hour: <span className={css.price}>28$</span>
                   </li>
                   <li className={css.detail}>
                     <CiHeart className={css.iconHeart} />
@@ -185,21 +185,21 @@ const Cards = () => {
               <ul>
                 <li className={css.infoItem}>
                   <p className={css.detail}>
-                    <span className={css.spanWord}>Speaks:</span> German, French
+                    <span className={css.spanWord}>Speaks:</span> English
                   </p>
                 </li>
                 <li className={css.infoItem}>
                   <p className={css.detail}>
                     <span className={css.spanWord}>Lesson Info:</span>
-                    Lessons are structured to cover grammar, vocabulary, and
-                    practical usage of the language.
+                    Lessons focus on building conversational skills and grammar
+                    knowledge.
                   </p>
                 </li>
                 <li className={css.infoItem}>
                   <p className={css.detail}>
                     <span className={css.spanWord}>Conditions:</span>
-                    Welcomes both adult learners and teenagers (13 years and
-                    above).Provides personalized study plans.
+                    Teaches adults and teenagers (15 years and above). Flexible
+                    lesson timings available.
                   </p>
                 </li>
               </ul>
@@ -210,12 +210,12 @@ const Cards = () => {
                 <li className={css.levelItem}>#A1 Beginner</li>
                 <li className={css.levelItem}>#A2 Elementary</li>
                 <li className={css.levelItem}>#B1 Intermediate</li>
-                <li className={css.levelItem}>#B2 Upper-Intermediate</li>
               </ul>
             </div>
           </div>
         </li>
       </ul>
+      <button className={css.bttn}>Load more</button>
     </div>
   );
 };

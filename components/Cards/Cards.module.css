@@ -129,3 +129,17 @@
 .levelItem:active {
   background: #f4c550;
 }
+.bttn {
+  border: none;
+  border-radius: 12px;
+  padding: 16px 48px;
+  width: 183px;
+  height: 60px;
+  background: #f4c550;
+  margin: 64px 620px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 156%;
+  color: #121417;
+}
