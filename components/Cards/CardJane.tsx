@@ -6,7 +6,7 @@ import { CiHeart } from "react-icons/ci";
 
 const CardJane = () => {
   return (
-    <div>
+    <div className={css.cardOpen}>
       <Image
         src="/image/image 4.png"
         alt="girl"
@@ -63,7 +63,7 @@ const CardJane = () => {
               </p>
             </li>
             <li className={css.infoItem}>
-              <p className={css.detail}>
+              <p className={css.detailOpen}>
                 Jane is an experienced and dedicated language teacher
                 specializing in German and French. She holds a Bachelor`s degree
                 in German Studies and a Master`s degree in French Literature.
@@ -78,7 +78,58 @@ const CardJane = () => {
               </p>
             </li>
           </ul>
-          <p className={css.read}>Read more</p>
+        </div>
+        <div className={css.feedbacksBlock}>
+          <ul className={css.feedbacks}>
+            <li className={css.feedback}>
+              <div className={css.feedbackImage}>
+                <Image
+                  src="/image/image 4.png"
+                  alt="man"
+                  width={44}
+                  height={44}
+                  priority={true}
+                  quality={85}
+                />
+                <div>
+                  <p>Frank</p>
+                  <p>
+                    <GoStarFill className={css.iconStar} />
+                    4.0
+                  </p>
+                </div>
+              </div>
+              <div>
+                {" "}
+                <p>Jane`s lessons were very helpful. I made good progress.</p>
+              </div>
+            </li>
+            <li className={css.feedback}>
+              <div className={css.feedbackImage}>
+                <Image
+                  src="/image/image 4.png"
+                  alt="girl"
+                  width={44}
+                  height={44}
+                  priority={true}
+                  quality={85}
+                />
+                <div>
+                  <p>Eve</p>
+                  <p>
+                    <GoStarFill className={css.iconStar} />
+                    5.0
+                  </p>
+                </div>
+              </div>
+              <div>
+                {" "}
+                <p>
+                  Jane is an amazing teacher! She is patient and supportive.
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
         <div>
           <ul className={css.level}>
