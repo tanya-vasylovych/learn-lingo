@@ -138,6 +138,14 @@
   gap: 8px;
   margin-top: 32px;
 }
+.levelOpen {
+  width: 566px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 32px;
+}
 .levelItem {
   border-radius: 35px;
   padding: 8px 12px;
@@ -187,4 +195,13 @@
   flex-direction: column;
   gap: 32px;
   margin-top: 32px;
+}
+.fdbckRank {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+  color: #121417;
+  display: flex;
+  gap: 8px;
 }

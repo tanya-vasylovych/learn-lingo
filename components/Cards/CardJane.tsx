@@ -92,8 +92,8 @@ const CardJane = () => {
                   quality={85}
                 />
                 <div>
-                  <p>Frank</p>
-                  <p>
+                  <p className={css.spanWord}>Frank</p>
+                  <p className={css.fdbckRank}>
                     <GoStarFill className={css.iconStar} />
                     4.0
                   </p>
@@ -101,7 +101,9 @@ const CardJane = () => {
               </div>
               <div>
                 {" "}
-                <p>Jane`s lessons were very helpful. I made good progress.</p>
+                <p className={css.detail}>
+                  Jane`s lessons were very helpful. I made good progress.
+                </p>
               </div>
             </li>
             <li className={css.feedback}>
@@ -115,8 +117,8 @@ const CardJane = () => {
                   quality={85}
                 />
                 <div>
-                  <p>Eve</p>
-                  <p>
+                  <p className={css.spanWord}>Eve</p>
+                  <p className={css.fdbckRank}>
                     <GoStarFill className={css.iconStar} />
                     5.0
                   </p>
@@ -124,7 +126,7 @@ const CardJane = () => {
               </div>
               <div>
                 {" "}
-                <p>
+                <p className={css.detail}>
                   Jane is an amazing teacher! She is patient and supportive.
                 </p>
               </div>
@@ -132,7 +134,7 @@ const CardJane = () => {
           </ul>
         </div>
         <div>
-          <ul className={css.level}>
+          <ul className={css.levelOpen}>
             <li className={css.levelItem}>#A1 Beginner</li>
             <li className={css.levelItem}>#A2 Elementary</li>
             <li className={css.levelItem}>#B1 Intermediate</li>
