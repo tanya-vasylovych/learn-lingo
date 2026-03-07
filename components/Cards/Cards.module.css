@@ -147,6 +147,7 @@
   margin-top: 32px;
 }
 .levelItem {
+  border: 1px solid rgba(18, 20, 23, 0.2);
   border-radius: 35px;
   padding: 8px 12px;
   height: 32px;
@@ -204,4 +205,18 @@
   color: #121417;
   display: flex;
   gap: 8px;
+}
+.bookLesson {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 156%;
+  color: #121417;
+  border-radius: 12px;
+  padding: 16px 48px;
+  width: 232px;
+  height: 60px;
+  background: #f4c550;
+  margin-top: 32px;
+  border: none;
 }

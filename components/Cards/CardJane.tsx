@@ -141,6 +141,7 @@ const CardJane = () => {
             <li className={css.levelItem}>#B2 Upper-Intermediate</li>
           </ul>
         </div>
+        <button className={css.bookLesson}>Book trial lesson</button>
       </div>
     </div>
   );
