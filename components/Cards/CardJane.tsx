@@ -134,7 +134,7 @@ const CardJane = () => {
           </ul>
         </div>
         <div>
-          <ul className={css.levelOpen}>
+          <ul className={css.level}>
             <li className={css.levelItem}>#A1 Beginner</li>
             <li className={css.levelItem}>#A2 Elementary</li>
             <li className={css.levelItem}>#B1 Intermediate</li>

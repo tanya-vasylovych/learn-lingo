@@ -138,14 +138,7 @@
   gap: 8px;
   margin-top: 32px;
 }
-.levelOpen {
-  width: 566px;
-  height: 32px;
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  margin-top: 32px;
-}
+
 .levelItem {
   border: 1px solid rgba(18, 20, 23, 0.2);
   border-radius: 35px;
@@ -156,6 +149,14 @@
   font-size: 14px;
   line-height: 114%;
   color: #121417;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
 }
 .levelItem:hover,
 .levelItem:active {
@@ -174,6 +175,7 @@
   font-size: 18px;
   line-height: 156%;
   color: #121417;
+  cursor: pointer;
 }
 .feedbackImage {
   display: flex;
@@ -219,4 +221,9 @@
   background: #f4c550;
   margin-top: 32px;
   border: none;
+  cursor: pointer;
+}
+.bookLesson:hover,
+.bookLesson:focus {
+  background: #ffdc86;
 }
