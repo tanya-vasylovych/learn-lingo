@@ -1,10 +1,14 @@
+"use client";
 import Image from "next/image";
 import css from "./Cards.module.css";
 import { LuBookOpen } from "react-icons/lu";
 import { GoStarFill } from "react-icons/go";
 import { CiHeart } from "react-icons/ci";
+import { useState } from "react";
+import BookTrialLesson from "../BookTrialLesson/BookTrialLesson";
 
 const CardJane = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className={css.cardOpen}>
       <Image
@@ -141,7 +145,15 @@ const CardJane = () => {
             <li className={css.levelItem}>#B2 Upper-Intermediate</li>
           </ul>
         </div>
-        <button className={css.bookLesson}>Book trial lesson</button>
+        <button className={css.bookLesson} onClick={() => setIsModalOpen(true)}>
+          Book trial lesson
+        </button>
+        {isModalOpen && (
+          <BookTrialLesson
+            onClose={() => setIsModalOpen(false)}
+            teacherName="Jane Smith"
+          />
+        )}
       </div>
     </div>
   );
