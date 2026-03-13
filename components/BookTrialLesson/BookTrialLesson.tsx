@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useEffect, useState } from "react";
 import css from "./BookTrialLesson.module.css";
+import Image from "next/image";
 
 const schema = yup.object({
   date: yup.string().required("Дата обов'язкова"),
@@ -50,41 +51,42 @@ const BookTrialLesson = ({ onClose, teacherName }: BookingModalProps) => {
       <div className={css.container} onClick={(e) => e.stopPropagation()}>
         <div className={css.header}>
           <h2 className={css.title}>Book trial lesson</h2>
-          <p className={css.subtitle}>with {teacherName}</p>
+          <p className={css.subtitle}>
+            Our experienced tutor will assess your current language level,
+            discuss your learning goals, and tailor the lesson to your specific
+            needs.
+          </p>
+        </div>
+        <div className={css.teacher}>
+          <Image
+            src="/image/image 4.png"
+            alt="girl"
+            width={44}
+            height={44}
+            priority={true}
+            quality={85}
+          />
+          <div>
+            <p className={css.your}>Your teacher</p>
+            <p className={css.name}>{teacherName}</p>
+          </div>
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className={css.form}>
           <div className={css.field}>
-            <input
-              {...register("date")}
-              type="date"
-              className={`${css.input} ${errors.date ? css.inputError : ""}`}
-            />
-            {errors.date && <p className={css.error}>{errors.date.message}</p>}
+            <input type="text" className={css.input} placeholder="Full Name" />
+          </div>
+
+          <div className={css.field}>
+            <input type="text" className={css.input} placeholder="Email" />
           </div>
 
           <div className={css.field}>
             <input
-              {...register("time")}
-              type="time"
-              className={`${css.input} ${errors.time ? css.inputError : ""}`}
+              type="text"
+              className={css.input}
+              placeholder="Phone number"
             />
-            {errors.time && <p className={css.error}>{errors.time.message}</p>}
-          </div>
-
-          <div className={css.field}>
-            <select
-              {...register("duration")}
-              className={`${css.input} ${errors.duration ? css.inputError : ""}`}
-            >
-              <option value="">Select duration</option>
-              <option value="30">30 minutes</option>
-              <option value="60">1 hour</option>
-              <option value="90">1.5 hours</option>
-            </select>
-            {errors.duration && (
-              <p className={css.error}>{errors.duration.message}</p>
-            )}
           </div>
 
           <div className={css.buttons}>
