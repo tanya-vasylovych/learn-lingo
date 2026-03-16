@@ -27,6 +27,7 @@
 .header {
   width: 472px;
   height: 134px;
+  margin-top: 12px;
 }
 
 .title {
@@ -54,6 +55,19 @@
   height: 44px;
   margin-top: 20px;
 }
+
+.textContainer {
+  width: 472px;
+  height: 64px;
+}
+.text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 133%;
+  color: #121417;
+  margin-top: 40px;
+}
 .your {
   font-family: var(--font-family);
   font-weight: 500;
@@ -77,7 +91,12 @@
   font-size: 16px;
   margin-top: 18px;
 }
-
+.radio {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background: #f4c550;
+}
 .inputError {
   border-color: #ff4d4f;
 }
@@ -94,8 +113,7 @@
   margin-top: 24px;
 }
 
-.submitButton,
-.cancelButton {
+.submitButton {
   flex: 1;
   padding: 12px 20px;
   border-radius: 8px;
@@ -111,8 +129,14 @@
 }
 
 .cancelButton {
-  background: #f5f5f5;
-  color: #666;
+  float: right;
+  top: 16px;
+  right: 24px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #121417;
 }
 
 .buttonDisabled {

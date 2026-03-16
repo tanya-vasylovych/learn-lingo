@@ -5,6 +5,7 @@ import * as yup from "yup";
 import { useEffect, useState } from "react";
 import css from "./BookTrialLesson.module.css";
 import Image from "next/image";
+import { FiX } from "react-icons/fi";
 
 const schema = yup.object({
   date: yup.string().required("Дата обов'язкова"),
@@ -49,6 +50,9 @@ const BookTrialLesson = ({ onClose, teacherName }: BookingModalProps) => {
   return (
     <div className={css.overlay} onClick={onClose}>
       <div className={css.container} onClick={(e) => e.stopPropagation()}>
+        <button className={css.cancelButton} onClick={onClose}>
+          <FiX />
+        </button>
         <div className={css.header}>
           <h2 className={css.title}>Book trial lesson</h2>
           <p className={css.subtitle}>
@@ -72,7 +76,29 @@ const BookTrialLesson = ({ onClose, teacherName }: BookingModalProps) => {
           </div>
         </div>
 
+        <div className={css.textContainer}>
+          <p className={css.text}>
+            What is your main reason for learning English?
+          </p>
+        </div>
+
         <form onSubmit={handleSubmit(onSubmit)} className={css.form}>
+          <div className={css.field}>
+            <input type="radio" className={css.radio} />
+          </div>
+          <div className={css.field}>
+            <input type="radio" className={css.radio} />
+          </div>
+          <div className={css.field}>
+            <input type="radio" className={css.radio} />
+          </div>
+          <div className={css.field}>
+            <input type="radio" className={css.radio} />
+          </div>
+          <div className={css.field}>
+            <input type="radio" className={css.radio} />
+          </div>
+
           <div className={css.field}>
             <input type="text" className={css.input} placeholder="Full Name" />
           </div>
@@ -91,18 +117,11 @@ const BookTrialLesson = ({ onClose, teacherName }: BookingModalProps) => {
 
           <div className={css.buttons}>
             <button
-              type="button"
-              onClick={onClose}
-              className={css.cancelButton}
-            >
-              Cancel
-            </button>
-            <button
               type="submit"
               disabled={!isValid}
               className={`${css.submitButton} ${!isValid ? css.buttonDisabled : ""}`}
             >
-              Book Lesson
+              Book
             </button>
           </div>
         </form>
