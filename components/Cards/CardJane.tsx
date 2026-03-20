@@ -9,6 +9,11 @@ import BookTrialLesson from "../BookTrialLesson/BookTrialLesson";
 
 const CardJane = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const toggleFavorite = () => {
+    setIsFavorite(!isFavorite);
+  };
   return (
     <div className={css.cardOpen}>
       <Image
@@ -39,8 +44,10 @@ const CardJane = () => {
               <li className={css.detail}>
                 Price / 1 hour: <span className={css.price}>30$</span>
               </li>
-              <li className={css.detail}>
-                <CiHeart className={css.iconHeart} />
+              <li className={css.detail} onClick={toggleFavorite}>
+                <CiHeart
+                  className={`${css.iconHeart} ${isFavorite ? css.isFavorite : ""}`}
+                />
               </li>
             </ul>
           </div>

@@ -97,6 +97,12 @@
   width: 26px;
   height: 26px;
   flex-shrink: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.isFavorite {
+  fill: #f4c550;
+  stroke: #f4c550;
 }
 .iconHeart:hover,
 .iconHeart:active {
@@ -129,6 +135,8 @@
   color: #121417;
   margin-top: 16px;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 .level {
   width: 566px;

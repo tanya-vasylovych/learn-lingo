@@ -9,6 +9,11 @@ import CardJane from "./CardJane";
 
 const Cards = () => {
   const [isReadOpen, setIsReadOpen] = useState(true);
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const toggleFavorite = () => {
+    setIsFavorite(!isFavorite);
+  };
   return (
     <div>
       <ul>
@@ -43,8 +48,10 @@ const Cards = () => {
                       <li className={css.detail}>
                         Price / 1 hour: <span className={css.price}>30$</span>
                       </li>
-                      <li className={css.detail}>
-                        <CiHeart className={css.iconHeart} />
+                      <li className={css.detail} onClick={toggleFavorite}>
+                        <CiHeart
+                          className={`${css.iconHeart} ${isFavorite ? css.isFavorite : ""}`}
+                        />
                       </li>
                     </ul>
                   </div>
@@ -123,8 +130,10 @@ const Cards = () => {
                   <li className={css.detail}>
                     Price / 1 hour: <span className={css.price}>35$</span>
                   </li>
-                  <li className={css.detail}>
-                    <CiHeart className={css.iconHeart} />
+                  <li className={css.detail} onClick={toggleFavorite}>
+                    <CiHeart
+                      className={`${css.iconHeart} ${isFavorite ? css.isFavorite : ""}`}
+                    />
                   </li>
                 </ul>
               </div>
@@ -192,8 +201,10 @@ const Cards = () => {
                   <li className={css.detail}>
                     Price / 1 hour: <span className={css.price}>28$</span>
                   </li>
-                  <li className={css.detail}>
-                    <CiHeart className={css.iconHeart} />
+                  <li className={css.detail} onClick={toggleFavorite}>
+                    <CiHeart
+                      className={`${css.iconHeart} ${isFavorite ? css.isFavorite : ""}`}
+                    />
                   </li>
                 </ul>
               </div>
