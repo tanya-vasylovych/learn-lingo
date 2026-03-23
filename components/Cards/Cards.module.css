@@ -101,14 +101,14 @@
   cursor: pointer;
 }
 .isFavorite {
-  fill: #f4c550;
-  stroke: #f4c550;
+  fill: #9fb7ce;
+  stroke: #9fb7ce;
 }
 .iconHeart:hover,
 .iconHeart:active {
-  fill: #f4c550;
+  fill: #9fb7ce;
   stroke-width: 1px;
-  stroke: #f4c550;
+  stroke: #9fb7ce;
 }
 .spanWord {
   font-family: var(--font-family);
@@ -168,7 +168,7 @@
 }
 .levelItem:hover,
 .levelItem:active {
-  background: #f4c550;
+  background: #9fb7ce;
 }
 .bttn {
   border: none;
@@ -176,7 +176,7 @@
   padding: 16px 48px;
   width: 183px;
   height: 60px;
-  background: #f4c550;
+  background: #9fb7ce;
   margin: 64px 620px;
   font-family: var(--font-family);
   font-weight: 700;
@@ -226,14 +226,14 @@
   padding: 16px 48px;
   width: 232px;
   height: 60px;
-  background: #f4c550;
+  background: #9fb7ce;
   margin-top: 32px;
   border: none;
   cursor: pointer;
 }
 .bookLesson:hover,
 .bookLesson:focus {
-  background: #ffdc86;
+  background: #bfd6ea;
 }
 
 .modalOverlay {
