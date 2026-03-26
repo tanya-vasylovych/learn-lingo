@@ -17,7 +17,7 @@ const CardJane = () => {
   return (
     <div className={css.cardOpen}>
       <Image
-        src="/image/image 4.png"
+        src="/image/sarah.png"
         alt="girl"
         width={96}
         height={96}
@@ -28,7 +28,7 @@ const CardJane = () => {
         <div className={css.detailBlock}>
           <div>
             <p className={css.text}>Languages</p>
-            <p className={css.name}>Jane Smith</p>
+            <p className={css.name}>Sarah Johnson</p>
           </div>
           <div>
             <ul className={css.details}>
@@ -158,7 +158,7 @@ const CardJane = () => {
         {isModalOpen && (
           <BookTrialLesson
             onClose={() => setIsModalOpen(false)}
-            teacherName="Jane Smith"
+            teacherName="Sarah Johnson"
           />
         )}
       </div>
