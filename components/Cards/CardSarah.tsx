@@ -36,13 +36,13 @@ const CardJane = () => {
                 <LuBookOpen className={css.icon} />
                 Lessons online
               </li>
-              <li className={css.detail}>Lessons done: 1098</li>
+              <li className={css.detail}>Lessons done: 1120</li>
               <li className={css.detail}>
                 <GoStarFill className={css.iconStar} />
-                Rating: 4.8
+                Rating: 4.6
               </li>
               <li className={css.detail}>
-                Price / 1 hour: <span className={css.price}>30$</span>
+                Price / 1 hour: <span className={css.price}>28$</span>
               </li>
               <li className={css.detail} onClick={toggleFavorite}>
                 <CiHeart
@@ -56,36 +56,30 @@ const CardJane = () => {
           <ul>
             <li className={css.infoItem}>
               <p className={css.detail}>
-                <span className={css.spanWord}>Speaks:</span> German, French
+                <span className={css.spanWord}>Speaks:</span> English
               </p>
             </li>
             <li className={css.infoItem}>
               <p className={css.detail}>
                 <span className={css.spanWord}>Lesson Info:</span>
-                Lessons are structured to cover grammar, vocabulary, and
-                practical usage of the language.
+                Lessons focus on building conversational skills and grammar
+                knowledge.
               </p>
             </li>
             <li className={css.infoItem}>
               <p className={css.detail}>
                 <span className={css.spanWord}>Conditions:</span>
-                Welcomes both adult learners and teenagers (13 years and
-                above).Provides personalized study plans.
+                Teaches adults and teenagers (15 years and above).Flexible
+                lesson timings available.
               </p>
             </li>
             <li className={css.infoItem}>
               <p className={css.detailOpen}>
-                Jane is an experienced and dedicated language teacher
-                specializing in German and French. She holds a Bachelor`s degree
-                in German Studies and a Master`s degree in French Literature.
-                Her passion for languages and teaching has driven her to become
-                a highly proficient and knowledgeable instructor. With over 10
-                years of teaching experience, Jane has helped numerous students
-                of various backgrounds and proficiency levels achieve their
-                language learning goals. She is skilled at adapting her teaching
-                methods to suit the needs and learning styles of her students,
-                ensuring that they feel supported and motivated throughout their
-                language journey.
+                Sarah has been teaching English for 6 years. She has worked with
+                students from diverse backgrounds and understands the challenges
+                they face while learning a new language. Her teaching approach
+                emphasizes practical communication skills and ensures a
+                supportive and engaging learning environment.
               </p>
             </li>
           </ul>
@@ -95,7 +89,7 @@ const CardJane = () => {
             <li className={css.feedback}>
               <div className={css.feedbackImage}>
                 <Image
-                  src="/image/image 4.png"
+                  src="/image/sarah.png"
                   alt="man"
                   width={44}
                   height={44}
@@ -103,7 +97,7 @@ const CardJane = () => {
                   quality={85}
                 />
                 <div>
-                  <p className={css.spanWord}>Frank</p>
+                  <p className={css.spanWord}>Emily</p>
                   <p className={css.fdbckRank}>
                     <GoStarFill className={css.iconStar} />
                     4.0
@@ -113,14 +107,14 @@ const CardJane = () => {
               <div>
                 {" "}
                 <p className={css.detail}>
-                  Jane`s lessons were very helpful. I made good progress.
+                  Sarah is a patient and helpful teacher. I enjoyed her lessons.
                 </p>
               </div>
             </li>
             <li className={css.feedback}>
               <div className={css.feedbackImage}>
                 <Image
-                  src="/image/image 4.png"
+                  src="/image/sarah.png"
                   alt="girl"
                   width={44}
                   height={44}
@@ -128,7 +122,7 @@ const CardJane = () => {
                   quality={85}
                 />
                 <div>
-                  <p className={css.spanWord}>Eve</p>
+                  <p className={css.spanWord}>Alex</p>
                   <p className={css.fdbckRank}>
                     <GoStarFill className={css.iconStar} />
                     5.0
@@ -138,7 +132,8 @@ const CardJane = () => {
               <div>
                 {" "}
                 <p className={css.detail}>
-                  Jane is an amazing teacher! She is patient and supportive.
+                  Sarah`s teaching style is engaging and effective. Highly
+                  recommended.
                 </p>
               </div>
             </li>
@@ -149,7 +144,6 @@ const CardJane = () => {
             <li className={css.levelItem}>#A1 Beginner</li>
             <li className={css.levelItem}>#A2 Elementary</li>
             <li className={css.levelItem}>#B1 Intermediate</li>
-            <li className={css.levelItem}>#B2 Upper-Intermediate</li>
           </ul>
         </div>
         <button className={css.bookLesson} onClick={() => setIsModalOpen(true)}>
