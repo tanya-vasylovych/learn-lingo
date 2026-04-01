@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import css from "./Filter.module.css";
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const Filter = () => {
   const [openSelect, setOpenSelect] = useState<string | null>(null);
@@ -67,7 +67,11 @@ const Filter = () => {
                 <span>
                   {selectedValues[key as keyof typeof selectedValues]}
                 </span>
-                <FaChevronDown className={css.selectIcon} />
+                {openSelect === key ? (
+                  <FaChevronUp className={css.selectIcon} />
+                ) : (
+                  <FaChevronDown className={css.selectIcon} />
+                )}
               </div>
 
               {openSelect === key && (
