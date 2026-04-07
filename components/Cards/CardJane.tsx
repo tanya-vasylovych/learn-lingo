@@ -95,7 +95,7 @@ const CardJane = () => {
             <li className={css.feedback}>
               <div className={css.feedbackImage}>
                 <Image
-                  src="/image/image 4.png"
+                  src="/image/frank.png"
                   alt="man"
                   width={44}
                   height={44}
@@ -120,7 +120,7 @@ const CardJane = () => {
             <li className={css.feedback}>
               <div className={css.feedbackImage}>
                 <Image
-                  src="/image/image 4.png"
+                  src="/image/eve.png"
                   alt="girl"
                   width={44}
                   height={44}
