@@ -153,6 +153,7 @@ const CardJane = () => {
           <BookTrialLesson
             onClose={() => setIsModalOpen(false)}
             teacherName="Sarah Johnson"
+            teacherImg={"/image/sarah.png"}
           />
         )}
       </div>

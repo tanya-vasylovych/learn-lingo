@@ -27,9 +27,11 @@ const reasons = [
 const BookTrialLesson = ({
   onClose,
   teacherName,
+  teacherImg,
 }: {
   onClose: () => void;
   teacherName: string;
+  teacherImg: string;
 }) => {
   const {
     register,
@@ -75,8 +77,8 @@ const BookTrialLesson = ({
 
         <div className={css.teacher}>
           <Image
-            src="/image/image 4.png"
-            alt="teacher"
+            src={teacherImg}
+            alt={teacherName}
             width={44}
             height={44}
             className={css.teacherImg}

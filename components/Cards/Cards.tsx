@@ -26,7 +26,7 @@ const Cards = () => {
           <li>
             <div className={css.card}>
               <Image
-                src="/image/image 4.png"
+                src="/image/jane.png"
                 alt="girl"
                 width={96}
                 height={96}
