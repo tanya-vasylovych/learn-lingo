@@ -154,3 +154,9 @@
   width: 565px;
   height: 599px;
 }
+.colorChange {
+  width: 20px;
+  height: 20px;
+  color: #9fb7ce;
+  cursor: pointer;
+}

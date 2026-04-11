@@ -6,6 +6,7 @@ import { FiLogIn, FiX } from "react-icons/fi";
 import Registration from "@/components/Registration/Registration";
 import Login from "@/components/Login/Login";
 import Logo from "../Logo/Logo";
+import { AiOutlineBgColors } from "react-icons/ai";
 
 const Header = () => {
   const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
@@ -31,6 +32,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+        <AiOutlineBgColors className={css.colorChange} />
         <ul className={css.buttons}>
           <li className={css.loginItem}>
             <FiLogIn
