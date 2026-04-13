@@ -11,6 +11,18 @@ import { AiOutlineBgColors } from "react-icons/ai";
 const Header = () => {
   const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isColorPickerOpen, setIsColorPickerOpen] = useState(false);
+
+  const colors = [
+    { name: "Green", value: "#9fb06d" },
+    { name: "Blue", value: "#4e76a8" },
+    { name: "Orange", value: "#f2bb5e" },
+    { name: "Rose", value: "#e2a5a5" },
+  ];
+  const changeColor = (colorValue: string) => {
+    document.documentElement.style.setProperty("--main-color", colorValue);
+    setIsColorPickerOpen(false);
+  };
   return (
     <>
       <header className={css.header}>
@@ -32,7 +44,26 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <AiOutlineBgColors className={css.colorChange} />
+        <div className={css.colorPickerWrapper}>
+          <AiOutlineBgColors
+            className={css.colorChange}
+            onClick={() => setIsColorPickerOpen(!isColorPickerOpen)}
+          />
+
+          {isColorPickerOpen && (
+            <ul className={css.colorDropdown}>
+              {colors.map((color) => (
+                <li
+                  key={color.value}
+                  onClick={() => changeColor(color.value)}
+                  style={{ borderLeft: `8px solid ${color.value}` }}
+                >
+                  {color.name}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
         <ul className={css.buttons}>
           <li className={css.loginItem}>
             <FiLogIn

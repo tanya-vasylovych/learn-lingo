@@ -160,3 +160,43 @@
   color: #9fb7ce;
   cursor: pointer;
 }
+.colorPickerWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.colorChange {
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.2s;
+}
+
+.colorChange:hover {
+  transform: scale(1.1);
+}
+
+.colorDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  list-style: none;
+  z-index: 100;
+  min-width: 120px;
+  margin-top: 10px;
+}
+
+.colorDropdown li {
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.colorDropdown li:hover {
+  background-color: #f5f5f5;
+}
