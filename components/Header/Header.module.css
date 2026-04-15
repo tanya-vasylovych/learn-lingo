@@ -35,7 +35,7 @@
 .buttons {
   display: flex;
   gap: 16px;
-  width: 255px;
+  width: 355px;
   height: 48px;
   align-items: center;
 }
@@ -56,7 +56,7 @@
 .loginIcon {
   width: 20px;
   height: 20px;
-  color: #9fb7ce;
+  color: var(--main-color);
   cursor: pointer;
 }
 .loginIcon:hover,
@@ -157,7 +157,7 @@
 .colorChange {
   width: 20px;
   height: 20px;
-  color: #9fb7ce;
+  color: var(--main-color);
   cursor: pointer;
 }
 .colorPickerWrapper {
@@ -178,12 +178,12 @@
 
 .colorDropdown {
   position: absolute;
-  top: 100%;
-  right: 0;
+  top: 120%;
+  left: 5%;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 8px 0;
+  padding: 0;
   list-style: none;
   z-index: 100;
   min-width: 120px;

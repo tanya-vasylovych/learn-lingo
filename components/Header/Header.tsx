@@ -14,10 +14,11 @@ const Header = () => {
   const [isColorPickerOpen, setIsColorPickerOpen] = useState(false);
 
   const colors = [
-    { name: "Green", value: "#9fb06d" },
-    { name: "Blue", value: "#4e76a8" },
-    { name: "Orange", value: "#f2bb5e" },
-    { name: "Rose", value: "#e2a5a5" },
+    { name: "Yellow", value: "#F4C550" },
+    { name: "Green", value: "#9FBAAE" },
+    { name: "Blue", value: "#9FB7CE" },
+    { name: "Rose", value: "#E0A39A" },
+    { name: "Orange", value: "#F0AA8D" },
   ];
   const changeColor = (colorValue: string) => {
     document.documentElement.style.setProperty("--main-color", colorValue);
@@ -44,26 +45,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <div className={css.colorPickerWrapper}>
-          <AiOutlineBgColors
-            className={css.colorChange}
-            onClick={() => setIsColorPickerOpen(!isColorPickerOpen)}
-          />
 
-          {isColorPickerOpen && (
-            <ul className={css.colorDropdown}>
-              {colors.map((color) => (
-                <li
-                  key={color.value}
-                  onClick={() => changeColor(color.value)}
-                  style={{ borderLeft: `8px solid ${color.value}` }}
-                >
-                  {color.name}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
         <ul className={css.buttons}>
           <li className={css.loginItem}>
             <FiLogIn
@@ -89,8 +71,29 @@ const Header = () => {
               Registration
             </button>
           </li>
+          <div className={css.colorPickerWrapper}>
+            <AiOutlineBgColors
+              className={css.colorChange}
+              onClick={() => setIsColorPickerOpen(!isColorPickerOpen)}
+            />
+
+            {isColorPickerOpen && (
+              <ul className={css.colorDropdown}>
+                {colors.map((color) => (
+                  <li
+                    key={color.value}
+                    onClick={() => changeColor(color.value)}
+                    style={{ borderLeft: `8px solid ${color.value}` }}
+                  >
+                    {color.name}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </ul>
       </header>
+
       {isLoginOpen && (
         <div className={css.modalOverlay} onClick={() => setIsLoginOpen(false)}>
           <div

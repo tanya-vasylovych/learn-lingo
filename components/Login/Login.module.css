@@ -76,7 +76,7 @@
   padding: 16px 210px;
   width: 438px;
   height: 60px;
-  background: #f4c550;
+  background: var(--main-color);
   cursor: pointer;
   font-family: var(--font-family);
   font-weight: 700;

@@ -118,11 +118,11 @@
   border-radius: 50%;
   transform: scale(0);
   transition: 0.1s transform;
-  background-color: #9fb7ce;
+  background-color: var(--main-color);
 }
 
 .radio:checked {
-  border-color: #9fb7ce;
+  border-color: var(--main-color);
 }
 
 .radio:checked::before {
@@ -140,7 +140,7 @@
 }
 
 .input:focus {
-  border-color: #9fb7ce;
+  border-color: var(--main-color);
 }
 
 .errorInput {
@@ -156,7 +156,7 @@
 .submitButton {
   width: 100%;
   padding: 16px;
-  background: #9fb7ce;
+  background: var(--main-color);
   color: #121417;
   border-radius: 12px;
   font-size: 18px;

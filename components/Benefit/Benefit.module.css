@@ -1,5 +1,5 @@
 .container {
-  border: 1.5px dashed #9fb7ce;
+  border: 1.5px dashed var(--main-color);
   border-radius: 30px;
   width: 1312px;
   height: 116px;

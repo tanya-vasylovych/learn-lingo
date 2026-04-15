@@ -49,7 +49,7 @@
   padding: 16px 88px;
   width: 267px;
   height: 60px;
-  background: #9fb7ce;
+  background: var(--main-color);
   border-color: transparent;
   cursor: pointer;
 }

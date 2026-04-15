@@ -101,14 +101,14 @@
   cursor: pointer;
 }
 .isFavorite {
-  fill: #9fb7ce;
-  stroke: #9fb7ce;
+  fill: var(--main-color);
+  stroke: var(--main-color);
 }
 .iconHeart:hover,
 .iconHeart:active {
-  fill: #9fb7ce;
+  fill: var(--main-color);
   stroke-width: 1px;
-  stroke: #9fb7ce;
+  stroke: var(--main-color);
 }
 .spanWord {
   font-family: var(--font-family);
@@ -168,7 +168,7 @@
 }
 .levelItem:hover,
 .levelItem:active {
-  background: #9fb7ce;
+  background: var(--main-color);
 }
 .bttn {
   border: none;
@@ -176,7 +176,7 @@
   padding: 16px 48px;
   width: 183px;
   height: 60px;
-  background: #9fb7ce;
+  background: var(--main-color);
   margin: 64px 620px;
   font-family: var(--font-family);
   font-weight: 700;
@@ -226,7 +226,7 @@
   padding: 16px 48px;
   width: 232px;
   height: 60px;
-  background: #9fb7ce;
+  background: var(--main-color);
   margin-top: 32px;
   border: none;
   cursor: pointer;
