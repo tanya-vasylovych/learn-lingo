@@ -233,7 +233,7 @@
 }
 .bookLesson:hover,
 .bookLesson:focus {
-  background: #bfd6ea;
+  background: var(--hover-color);
 }
 
 .modalOverlay {

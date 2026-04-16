@@ -34,7 +34,7 @@
   border-radius: 8px;
   width: 195px;
   height: 40px;
-  background: #bfd6ea;
+  background: var(--hover-color);
 }
 .description {
   font-family: var(--font-family);
@@ -55,11 +55,11 @@
 }
 .bttn:hover,
 .bttn:focus {
-  background: #bfd6ea;
+  background: var(--hover-color);
 }
 .img {
   border-radius: 30px;
   width: 568px;
   height: 530px;
-  background: #bfd6ea;
+  background: var(--hover-color);
 }

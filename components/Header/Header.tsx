@@ -14,14 +14,15 @@ const Header = () => {
   const [isColorPickerOpen, setIsColorPickerOpen] = useState(false);
 
   const colors = [
-    { name: "Yellow", value: "#F4C550" },
-    { name: "Green", value: "#9FBAAE" },
-    { name: "Blue", value: "#9FB7CE" },
-    { name: "Rose", value: "#E0A39A" },
-    { name: "Orange", value: "#F0AA8D" },
+    { name: "Yellow", value: "#F4C550", hover: "#FBE9BA" },
+    { name: "Green", value: "#9FBAAE", hover: "#CBDED3" },
+    { name: "Blue", value: "#9FB7CE", hover: "#BFD6EA" },
+    { name: "Rose", value: "#E0A39A", hover: "#F2C0BD" },
+    { name: "Orange", value: "#F0AA8D", hover: "#F4C8BA" },
   ];
-  const changeColor = (colorValue: string) => {
+  const changeColor = (colorValue: string, hoverValue: string) => {
     document.documentElement.style.setProperty("--main-color", colorValue);
+    document.documentElement.style.setProperty("--hover-color", hoverValue);
     setIsColorPickerOpen(false);
   };
   return (
@@ -82,7 +83,7 @@ const Header = () => {
                 {colors.map((color) => (
                   <li
                     key={color.value}
-                    onClick={() => changeColor(color.value)}
+                    onClick={() => changeColor(color.value, color.hover)}
                     style={{ borderLeft: `8px solid ${color.value}` }}
                   >
                     {color.name}

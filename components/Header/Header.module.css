@@ -61,7 +61,7 @@
 }
 .loginIcon:hover,
 .loginIcon:focus {
-  color: #bfd6ea;
+  color: var(--hover-color);
 }
 .registration {
   border: transparent;
