@@ -92,7 +92,8 @@
   margin-left: 4px;
 }
 .iconHeart {
-  stroke-width: 0.5px;
+  fill: #fff;
+  stroke-width: 40px;
   stroke: #121417;
   width: 26px;
   height: 26px;

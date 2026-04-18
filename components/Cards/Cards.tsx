@@ -4,6 +4,7 @@ import css from "./Cards.module.css";
 import { LuBookOpen } from "react-icons/lu";
 import { GoStarFill } from "react-icons/go";
 import { CiHeart } from "react-icons/ci";
+import { IoMdHeart } from "react-icons/io";
 import { useState } from "react";
 import CardJane from "./CardJane";
 import CardDavid from "./CardDavid";
@@ -14,10 +15,12 @@ const Cards = () => {
   const [isDavidOpen, setIsDavidOpen] = useState(false);
   const [isSarahOpen, setIsSarahOpen] = useState(false);
 
-  const [isFavorite, setIsFavorite] = useState(false);
+  const [favorites, setFavorites] = useState<string[]>([]);
 
-  const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
+  const toggleFavorite = (id: string) => {
+    setFavorites((prev) =>
+      prev.includes(id) ? prev.filter((favId) => favId !== id) : [...prev, id],
+    );
   };
   return (
     <div>
@@ -53,9 +56,14 @@ const Cards = () => {
                       <li className={css.detail}>
                         Price / 1 hour: <span className={css.price}>30$</span>
                       </li>
-                      <li className={css.detail} onClick={toggleFavorite}>
-                        <CiHeart
-                          className={`${css.iconHeart} ${isFavorite ? css.isFavorite : ""}`}
+                      <li
+                        className={css.detail}
+                        onClick={() => toggleFavorite("jane")}
+                      >
+                        <IoMdHeart
+                          className={`${css.iconHeart} ${
+                            favorites.includes("jane") ? css.isFavorite : ""
+                          }`}
                         />
                       </li>
                     </ul>
@@ -136,9 +144,14 @@ const Cards = () => {
                     <li className={css.detail}>
                       Price / 1 hour: <span className={css.price}>35$</span>
                     </li>
-                    <li className={css.detail} onClick={toggleFavorite}>
-                      <CiHeart
-                        className={`${css.iconHeart} ${isFavorite ? css.isFavorite : ""}`}
+                    <li
+                      className={css.detail}
+                      onClick={() => toggleFavorite("david")}
+                    >
+                      <IoMdHeart
+                        className={`${css.iconHeart} ${
+                          favorites.includes("david") ? css.isFavorite : ""
+                        }`}
                       />
                     </li>
                   </ul>
@@ -216,9 +229,14 @@ const Cards = () => {
                     <li className={css.detail}>
                       Price / 1 hour: <span className={css.price}>28$</span>
                     </li>
-                    <li className={css.detail} onClick={toggleFavorite}>
-                      <CiHeart
-                        className={`${css.iconHeart} ${isFavorite ? css.isFavorite : ""}`}
+                    <li
+                      className={css.detail}
+                      onClick={() => toggleFavorite("sarah")}
+                    >
+                      <IoMdHeart
+                        className={`${css.iconHeart} ${
+                          favorites.includes("sarah") ? css.isFavorite : ""
+                        }`}
                       />
                     </li>
                   </ul>

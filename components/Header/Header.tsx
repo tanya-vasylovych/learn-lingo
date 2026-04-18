@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import css from "./Header.module.css";
 import { FiLogIn, FiX } from "react-icons/fi";
 import Registration from "@/components/Registration/Registration";
@@ -12,7 +12,6 @@ const Header = () => {
   const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isColorPickerOpen, setIsColorPickerOpen] = useState(false);
-
   const colors = [
     { name: "Yellow", value: "#F4C550", hover: "#FBE9BA" },
     { name: "Green", value: "#9FBAAE", hover: "#CBDED3" },
@@ -20,9 +19,29 @@ const Header = () => {
     { name: "Rose", value: "#E0A39A", hover: "#F2C0BD" },
     { name: "Orange", value: "#F0AA8D", hover: "#F4C8BA" },
   ];
+  useEffect(() => {
+    const savedMainColor = localStorage.getItem("main-color");
+    const savedHoverColor = localStorage.getItem("hover-color");
+
+    if (savedMainColor && savedHoverColor) {
+      document.documentElement.style.setProperty(
+        "--main-color",
+        savedMainColor,
+      );
+      document.documentElement.style.setProperty(
+        "--hover-color",
+        savedHoverColor,
+      );
+    }
+  }, []);
+
   const changeColor = (colorValue: string, hoverValue: string) => {
     document.documentElement.style.setProperty("--main-color", colorValue);
     document.documentElement.style.setProperty("--hover-color", hoverValue);
+
+    localStorage.setItem("main-color", colorValue);
+    localStorage.setItem("hover-color", hoverValue);
+
     setIsColorPickerOpen(false);
   };
   return (
@@ -111,7 +130,6 @@ const Header = () => {
           </div>
         </div>
       )}
-
       {isRegistrationOpen && (
         <div
           className={css.modalOverlay}
@@ -127,25 +145,7 @@ const Header = () => {
             >
               <FiX />
             </button>
-            {isRegistrationOpen && (
-              <div
-                className={css.modalOverlay}
-                onClick={() => setIsRegistrationOpen(false)}
-              >
-                <div
-                  className={`${css.modalContent} ${css.registrationModal}`}
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <button
-                    className={css.closeModal}
-                    onClick={() => setIsRegistrationOpen(false)}
-                  >
-                    <FiX />
-                  </button>
-                  <Registration onClose={() => setIsRegistrationOpen(false)} />
-                </div>
-              </div>
-            )}
+            <Registration onClose={() => setIsRegistrationOpen(false)} />
           </div>
         </div>
       )}
