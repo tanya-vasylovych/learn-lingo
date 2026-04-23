@@ -186,6 +186,10 @@
   color: #121417;
   cursor: pointer;
 }
+.bttn:hover,
+.bttn:focus {
+  background: var(--hover-color);
+}
 .feedbackImage {
   display: flex;
   flex-direction: row;

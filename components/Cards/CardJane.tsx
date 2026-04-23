@@ -3,7 +3,7 @@ import Image from "next/image";
 import css from "./Cards.module.css";
 import { LuBookOpen } from "react-icons/lu";
 import { GoStarFill } from "react-icons/go";
-import { CiHeart } from "react-icons/ci";
+import { IoMdHeart } from "react-icons/io";
 import { useState } from "react";
 import BookTrialLesson from "../BookTrialLesson/BookTrialLesson";
 
@@ -45,7 +45,7 @@ const CardJane = () => {
                 Price / 1 hour: <span className={css.price}>30$</span>
               </li>
               <li className={css.detail} onClick={toggleFavorite}>
-                <CiHeart
+                <IoMdHeart
                   className={`${css.iconHeart} ${isFavorite ? css.isFavorite : ""}`}
                 />
               </li>

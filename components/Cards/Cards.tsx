@@ -3,7 +3,6 @@ import Image from "next/image";
 import css from "./Cards.module.css";
 import { LuBookOpen } from "react-icons/lu";
 import { GoStarFill } from "react-icons/go";
-import { CiHeart } from "react-icons/ci";
 import { IoMdHeart } from "react-icons/io";
 import { useState } from "react";
 import CardJane from "./CardJane";
