@@ -42,6 +42,8 @@ const Header = () => {
     localStorage.setItem("main-color", colorValue);
     localStorage.setItem("hover-color", hoverValue);
 
+    window.dispatchEvent(new Event("storage"));
+
     setIsColorPickerOpen(false);
   };
   return (

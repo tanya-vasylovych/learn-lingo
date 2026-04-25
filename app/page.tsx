@@ -1,9 +1,34 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Benefit from "@/components/Benefit/Benefit";
 import css from "./page.module.css";
 
 export default function Home() {
+  const [imgColor, setImgColor] = useState("#F4C550");
+
+  useEffect(() => {
+    const updateImage = () => {
+      const savedColor = localStorage.getItem("main-color");
+      if (savedColor) {
+        setImgColor(savedColor);
+      }
+    };
+
+    updateImage();
+
+    window.addEventListener("storage", updateImage);
+
+    return () => window.removeEventListener("storage", updateImage);
+  }, []);
+
+  const imageMap: Record<string, string> = {
+    "#F4C550": "/image/block (1).png",
+    "#9FBAAE": "/image/block (2).png",
+    "#9FB7CE": "/image/block.webp",
+    "#E0A39A": "/image/block-rose.webp",
+    "#F0AA8D": "/image/block-orange.webp",
+  };
   const handleClick = () => {
     window.location.href = "/filter/";
   };
@@ -29,7 +54,7 @@ export default function Home() {
         </div>
         <div className={css.img}>
           <Image
-            src="/image/block.webp"
+            src={imageMap[imgColor] || "/image/block.webp"}
             alt="Language tutors illustration"
             width={568}
             height={530}
