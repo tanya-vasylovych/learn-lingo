@@ -23,8 +23,8 @@ export default function Home() {
   }, []);
 
   const imageMap: Record<string, string> = {
-    "#F4C550": "/image/block (1).png",
-    "#9FBAAE": "/image/block (2).png",
+    "#F4C550": "/image/block-yellow.webp",
+    "#9FBAAE": "/image/block-green.webp",
     "#9FB7CE": "/image/block.webp",
     "#E0A39A": "/image/block-rose.webp",
     "#F0AA8D": "/image/block-orange.webp",
