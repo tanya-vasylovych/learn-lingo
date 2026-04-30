@@ -1,6 +1,16 @@
 .container {
-  border: 1.5px dashed var(--main-color);
-  border-radius: 30px;
+  border: 1.5px dashed transparent;
+  background:
+    linear-gradient(white, white) padding-box,
+    repeating-linear-gradient(
+        -45deg,
+        var(--main-color),
+        var(--main-color) 10px,
+        transparent 10px,
+        transparent 20px
+      )
+      border-box;
+  border-radius: 20px;
   width: 1312px;
   height: 116px;
   margin: 24px auto;
