@@ -68,6 +68,7 @@
   width: 438px;
   height: 54px;
   box-sizing: border-box;
+  outline: none;
 }
 
 .button {
@@ -106,4 +107,7 @@
 .buttonDisabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+.input:focus {
+  border-color: var(--main-color);
 }

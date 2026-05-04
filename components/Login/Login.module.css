@@ -68,6 +68,7 @@
   padding: 16px 18px;
   width: 438px;
   height: 54px;
+  outline: none;
 }
 
 .button {
@@ -87,7 +88,7 @@
 }
 .button:hover,
 .button:focus {
-  background: #ffdc86;
+  background: var(--hover-color);
 }
 .inputError {
   border-color: #ef4444;
@@ -105,4 +106,7 @@
 .buttonDisabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+.input:focus {
+  border-color: var(--main-color);
 }
