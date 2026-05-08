@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {
   width?: number;
@@ -16,13 +17,15 @@ export default function Logo({
   ariaLabel = "LearnLingo",
 }: Props) {
   return (
-    <Image
-      src="/logo/ukraine.svg"
-      alt={ariaLabel}
-      width={width}
-      height={height}
-      className={className}
-      priority
-    />
+    <Link href="/" aria-label="Home">
+      <Image
+        src="/logo/ukraine.svg"
+        alt={ariaLabel}
+        width={width}
+        height={height}
+        className={className}
+        priority
+      />
+    </Link>
   );
 }
